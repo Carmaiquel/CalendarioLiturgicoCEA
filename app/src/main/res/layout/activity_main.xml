@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:weightSum="10">
+
+        <EditText
+            android:id="@+id/fecha_numero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="3"
+            android:textAllCaps="true"
+            android:textColor="#ff0000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/fecha_semana"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fecha_dia"
+            android:layout_weight="3"
+            android:text="4º Semana de Cuaresma"
+            android:textAllCaps="true"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/fecha_semana"
+            android:layout_weight="3"
+            android:text="Morado"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/misa_title"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4sp"
+            android:layout_marginRight="4sp"
+            android:gravity="end"
+            android:text="Misa:"
+            android:textAlignment="textEnd"
+            android:textColor="#ff0000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/misa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/misa_title"
+            android:text="del propio"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/lecturas_title"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/misa_title"
+            android:layout_marginBottom="4sp"
+            android:layout_marginRight="4sp"
+            android:gravity="end"
+            android:text="Lecturas:"
+            android:textAlignment="textEnd"
+            android:textColor="#ff0000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/primeralectura1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lecturas_title"
+            android:layout_toRightOf="@+id/lecturas_title"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/primeralectura2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/lecturas_title"
+            android:layout_toRightOf="@+id/primeralectura1"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/salmo1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/primeralectura1"
+            android:layout_toRightOf="@+id/lecturas_title"
+            android:text="Sal 33, 1-29"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/salmo2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/salmo1"
+            android:layout_toRightOf="@+id/salmo1"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+
+        <TextView
+            android:id="@+id/segundalectura1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/salmo1"
+            android:layout_toRightOf="@+id/lecturas_title"
+            android:text="Rm 8,38"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/segundalectura2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/segundalectura1"
+            android:layout_toRightOf="@+id/segundalectura1"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/evangelio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/segundalectura1"
+            android:layout_toRightOf="@+id/lecturas_title"
+            android:text="Jn 13, 1-6"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/evangelio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/evangelio1"
+            android:layout_toRightOf="@+id/evangelio1"
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/liturgiadelashoras_title"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/evangelio1"
+            android:layout_marginBottom="4sp"
+            android:layout_marginRight="4sp"
+            android:gravity="end"
+            android:text="L. de las Horas:"
+            android:textAlignment="textEnd"
+            android:textColor="#ff0000"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/liturgiadelashoras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/liturgiadelashoras_title"
+            android:layout_below="@+id/evangelio1"
+            android:layout_marginTop="71dp"
+            android:layout_toRightOf="@+id/liturgiadelashoras_title"
+            android:text="Propio del tiempo."
+            android:textColor="#000000"
+            android:textSize="10sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>
