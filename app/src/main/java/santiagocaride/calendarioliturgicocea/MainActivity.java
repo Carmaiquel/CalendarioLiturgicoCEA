@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Poner la fecha de hoy
+        // Put todays date
 
         Context context = this;
         TextView fecha_numero = (TextView) findViewById(R.id.fecha_numero);
@@ -77,18 +77,21 @@ public class MainActivity extends AppCompatActivity {
         String strDate = sm.format(myDate);
         fecha_numero.setText(strDate);
 
-        // Obtener la diferencia entre Pascua y la fecha de hoy
+        // Substract two dates: Today from Easter
 
-        // Obtener la fecha de Pascua
+        // Obtain the Easter Day of the current year
 
         TextView segundaLectura1 = (TextView) findViewById(R.id.segundalectura1);
+        Date hoy = new Date();
         SimpleDateFormat anio = new SimpleDateFormat("yyyy");
-        String aniopascua = anio.format(myDate);
+        String aniopascua = anio.format(hoy);
         int year = Integer.parseInt(aniopascua);
-        getEasterSundayDate(year);
-        segundaLectura1.setText(year);
+        segundaLectura1.setText(getEasterSundayDate(year));
 
     }
+
+    //  Easter date method
+
     public static String getEasterSundayDate(int year) {
         int a = year % 19,
                 b = year / 100,
